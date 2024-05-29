@@ -2,10 +2,13 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class Board {
-    //make new board
+
+    //make board and hidden board
     private String[][] board;
     private String[][] hidden;
 
+
+    //initialize board with _
     public Board(){
         board = new String[3][4];
         for (int i = 0; i < board.length; i++) {
@@ -15,9 +18,14 @@ public class Board {
         }
         hidden = new String[3][4];
     }
-
+    /*
+    //create board
+    // @param
+    // @return
+     */
     public void createBoard(){
         ArrayList<String> letters = new ArrayList<String>();
+        //add letters a-f 2 times in arraylist
         for (char c = 'a'; c <= 'f'; c++) {
             letters.add(String.valueOf(c));
             letters.add(String.valueOf(c));

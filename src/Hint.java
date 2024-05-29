@@ -1,5 +1,7 @@
 import java.util.Scanner;
 public class Hint extends Play implements Askable{
+
+    //initialize board
     public Hint(Board board) {
         super(board);
     }
@@ -13,18 +15,18 @@ public class Hint extends Play implements Askable{
         Scanner input = new Scanner(System.in);
         //play until game over
         while (!gameOver()) {
-            //ask user to input row 1
+            //ask user to input row 1 and column 1
             System.out.println("Enter row #1: ");
             int row1 = input.nextInt();
             System.out.println("Enter column #1: ");
             int col1 = input.nextInt();
             board.updateBoard(row1, col1);
             board.printBoard();
-
+            //check if letter equals a
             if (board.getLetter(row1, col1).equals("a")) {
                 giveHint(row1, col1);
             }
-
+            //ask user to input row 2 and column 2
             System.out.println("Enter row #2: ");
             int row2 = input.nextInt();
             System.out.println("Enter column #2: ");
