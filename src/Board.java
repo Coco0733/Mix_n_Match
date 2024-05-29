@@ -30,6 +30,7 @@ public class Board {
             letters.add(String.valueOf(c));
             letters.add(String.valueOf(c));
         }
+        //randomize letters on board
         Random rand = new Random();
         for(int i = 0; i < hidden.length; i++){
             for(int j = 0; j < hidden[i].length; j++){
@@ -40,6 +41,7 @@ public class Board {
         }
     }
 
+    //reset board when needed
     public void resetBoard(){
         board = new String[][]{{"_","_","_"},
                                 {"_","_","_"},
@@ -47,6 +49,11 @@ public class Board {
                                 {"_","_","_"}};
     }
 
+    /*
+    //print board out
+    // @param
+    // @return
+     */
     public void printBoard(){
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
@@ -56,6 +63,11 @@ public class Board {
         }
     }
 
+    /*
+    //print hidden board out
+    // @param
+    // @return
+     */
     public void printHidden(){
         for (int i = 0; i < hidden.length; i++) {
             for (int j = 0; j < hidden[i].length; j++) {
@@ -66,6 +78,11 @@ public class Board {
 
     }
 
+    /*
+    //get row number with letter a
+    // @param
+    // @return int row number
+     */
     public int getRowA(){
         int row = 0;
         for(int i = 0; i < hidden.length; i++){
@@ -78,6 +95,11 @@ public class Board {
         return row;
     }
 
+    /*
+    //get column number with letter a
+    // @param
+    // @return int column number
+     */
     public int getColA(){
         int col = 0;
         for(int i = 0; i < hidden.length; i++){
@@ -91,18 +113,38 @@ public class Board {
     }
 
 
+    /*
+    //update board based on user input
+    // @param int row, int col
+    // @return
+     */
     public void updateBoard(int row, int col){
         board[row][col] = hidden[row][col];
     }
 
+    /*
+    //reset board if user input is incorrect
+    // @param int row, int col
+    // @return
+     */
     public void redoBoard(int row, int col){
         board[row][col] = "_";
     }
 
+    /*
+    //get letter based on row and column
+    // @param int row, int col
+    // @return String letter
+     */
     public String getLetter(int row, int col){
         return board[row][col];
     }
 
+    /*
+    //check if all letters are matched
+    // @param
+    // @return boolean if board is finished
+     */
     public boolean matched() {
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
