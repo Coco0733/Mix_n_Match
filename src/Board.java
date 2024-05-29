@@ -10,7 +10,8 @@ public class Board {
         board = new String[3][4];
         for (int i = 0; i < board.length; i++) {
             for (int j = 0; j < board[i].length; j++) {
-                board[i][j] = "_"; // Fill the board with default values
+                // Fill the board with default values
+                board[i][j] = "_";
             }
         }
         hidden = new String[3][4];
