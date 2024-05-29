@@ -13,6 +13,7 @@ public class Hint extends Play implements Askable{
         Scanner input = new Scanner(System.in);
         //play until game over
         while (!gameOver()) {
+            //ask user to input row 1
             System.out.println("Enter row #1: ");
             int row1 = input.nextInt();
             System.out.println("Enter column #1: ");
