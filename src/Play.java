@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Play implements Ask{
+public class Play implements Askable{
     public Board board;
 
     public Play(Board board){

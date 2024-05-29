@@ -1,11 +1,17 @@
 import java.util.Scanner;
-public class Hint extends Play implements Ask{
+public class Hint extends Play implements Askable{
     public Hint(Board board) {
         super(board);
     }
 
+    /*
+    //ask user to input row and column
+    // @param
+    // @return
+     */
     public void ask() {
         Scanner input = new Scanner(System.in);
+        //play until game over
         while (!gameOver()) {
             System.out.println("Enter row #1: ");
             int row1 = input.nextInt();
