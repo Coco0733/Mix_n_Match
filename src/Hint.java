@@ -47,6 +47,11 @@ public class Hint extends Play implements Askable{
         System.out.println("Game Over!!");
     }
 
+    /*
+    //Give user hint for location of letter A
+    // @param int row1, int col1
+    // @return
+     */
     private void giveHint(int row1, int col1) {
         int row2 = board.getRowA();
         int col2 = board.getColA();

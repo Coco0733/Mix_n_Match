@@ -4,7 +4,11 @@ public class Play implements Askable{
     //create new board
     public Board board;
 
+    /*
     //initialize board
+    // @param Board  board
+    // @return
+     */
     public Play(Board board){
         this.board = board;
     }
