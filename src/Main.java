@@ -11,7 +11,7 @@ public class Main {
             System.out.println("Starting board");
             board.createBoard();
             board.printBoard();
-            board.printHidden();
+            //board.printHidden();
             System.out.println("Would you like to play with hints? Y/N");
             String hint = input.nextLine();
             Play play;

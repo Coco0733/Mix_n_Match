@@ -9,6 +9,11 @@ public class Play implements Askable{
         this.board = board;
     }
 
+    /*
+    //ask user to input row and column
+    // @param
+    // @return
+     */
     public void ask(){
         Scanner input = new Scanner(System.in);
         while(!gameOver()){
