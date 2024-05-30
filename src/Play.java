@@ -6,7 +6,7 @@ public class Play implements Askable{
 
     /*
     //initialize board
-    // @param Board  board
+    // @param Board board
     // @return
      */
     public Play(Board board){
